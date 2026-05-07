@@ -1,6 +1,6 @@
 # llm-eval
 
-Automated benchmark tool for evaluating locally-hosted LLM models via [Ollama](https://ollama.com). Runs a structured 30-question benchmark across 6 capability categories, generates visualizations, and writes a per-model Markdown report. Each run automatically updates this file with a link to the full report.
+Automated benchmark tool for evaluating locally-hosted LLM models via [Ollama](https://ollama.com). Runs a structured 300-question benchmark across 6 capability categories, generates visualizations, and writes a per-model Markdown report. Each run automatically updates this file with a link to the full report.
 
 ---
 
@@ -80,16 +80,16 @@ Charts are embedded in `report.md` using relative paths, so they render on GitHu
 
 ### Categories
 
-The benchmark covers 6 categories with 5 questions each (30 total). All questions are sent with `temperature: 0` for deterministic, reproducible results.
+The benchmark covers 6 categories with 50 questions each (300 total). All questions are sent with `temperature: 0` for deterministic, reproducible results.
 
 | Category | Questions | What it tests |
 |----------|-----------|---------------|
-| **Reasoning** | 5 | Logical deduction, puzzles, causal inference |
-| **Mathematics** | 5 | Arithmetic, algebra, word problems |
-| **Knowledge** | 5 | Factual recall across history, science, geography |
-| **Code** | 5 | Python code generation and syntax validity |
-| **Instruction Following** | 5 | Adherence to format constraints (word count, JSON, line count) |
-| **Agentic** | 5 | Multi-turn context retention, task decomposition, tool use |
+| **Reasoning** | 50 | Logical deduction, puzzles, causal inference, probability, combinatorics |
+| **Mathematics** | 50 | Arithmetic, algebra, calculus, combinatorics, geometry, number theory |
+| **Knowledge** | 50 | Factual recall across history, science, geography, literature, biology |
+| **Code** | 50 | Python code generation and syntax validity, from basic to advanced algorithms |
+| **Instruction Following** | 50 | Adherence to format constraints (word count, JSON, line count, exact strings) |
+| **Agentic** | 50 | Multi-turn context retention, task decomposition, structured tool-call generation |
 
 The **Overall Score** is the unweighted mean of all six category scores, scaled to 0–100.
 
@@ -111,9 +111,9 @@ Each `Question` is assigned a `score_fn` that determines how its response is eva
 
 The Agentic category is specifically designed to surface failures common in autonomous task pipelines:
 
-- **Context retention (Q1–Q2):** Seeds facts in turn 1, asks the model to recall them exactly in turn 2. Tests whether the model maintains conversation state. Sent as a real multi-turn `ollama.chat()` call with the full message history.
-- **Task decomposition & follow-through (Q3–Q4):** Asks for a numbered plan in turn 1, then asks the model to execute a specific step in turn 2 while referencing its own plan. Tests self-consistency across turns.
-- **Simulated tool use (Q5):** Provides a JSON tool schema and asks the model to produce a valid tool-call object for a described user request. Tests structured output capability.
+- **Context retention (Q1–Q10):** Seeds facts in turn 1, asks the model to recall them exactly in turn 2. Tests whether the model maintains conversation state across a wide range of domain contexts (configs, salaries, project specs, etc.). Sent as real multi-turn `ollama.chat()` calls with the full message history.
+- **Task decomposition & follow-through (Q11–Q20):** Asks for a numbered plan in turn 1, then asks the model to execute or elaborate on a specific step in turn 2 while referencing its own plan. Tests self-consistency across a variety of engineering and operational scenarios.
+- **Simulated tool use (Q21–Q50):** Provides a JSON tool schema and asks the model to produce a valid tool-call object for a described user request. Covers 30 diverse tools — weather, CRUD, finance, scheduling, messaging, infrastructure, and more — testing structured output capability and parameter inference under varied complexity.
 
 ### Score Interpretation
 
@@ -168,7 +168,7 @@ llm-eval/
 
 ### Adding a Question
 
-Append a `Question` to the `QUESTIONS` list (`main.py:55`). Pick the most appropriate existing `score_fn`. If the category is new, it will automatically appear in charts and the report — no other changes needed.
+Append a `Question` to the `QUESTIONS` list (`main.py:55`). Pick the most appropriate existing `score_fn`. If the category is new, it will automatically appear in charts and the report — no other changes needed. With 50 questions per category the benchmark is already demanding; new questions should add coverage gaps rather than redundancy.
 
 ```python
 Question(
