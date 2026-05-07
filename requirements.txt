@@ -1,0 +1,4 @@
+ollama
+matplotlib
+numpy
+tqdm
