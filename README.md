@@ -220,7 +220,9 @@ Python packages (`requirements.txt`):
 | Model | Score | Tokens/sec | Date | Report |
 |-------|------:|-----------:|------|--------|
 | `gemma4:e4b` | 91.6 / 100 | 29.7 | 2026-05-06 | [Report](evaluations/gemma4_e4b/report.md) |
-| `qwen3-coder-next:q4_K_M` | 95.2 / 100 | 5.2 | 2026-05-06 | [Report](evaluations/qwen3-coder-next_q4_K_M/report.md) |
-| `deepseek-coder-v2:16b` | 93.3 / 100 | 166.2 | 2026-05-06 | [Report](evaluations/deepseek-coder-v2_16b/report.md) |
-| `qwen3-coder:30b` | 96.0 / 100 | 24.4 | 2026-05-06 | [Report](evaluations/qwen3-coder_30b/report.md) |
+| `qwen3-coder-next:q4_K_M` | 92.2 / 100 | 5.2 | 2026-05-07 | [Report](evaluations/qwen3-coder-next_q4_K_M/report.md) |
+| `deepseek-coder-v2:16b` | 88.3 / 100 | 111.7 | 2026-05-08 | [Report](evaluations/deepseek-coder-v2_16b/report.md) |
+| `qwen3-coder:30b` | 92.1 / 100 | 14.2 | 2026-05-07 | [Report](evaluations/qwen3-coder_30b/report.md) |
 | `nemotron-3-super:cloud` | 98.9 / 100 | 1.2 | 2026-05-06 | [Report](evaluations/nemotron-3-super_cloud/report.md) |
+| `qwen3-coder_30b` | 0.0 / 100 | 0.0 | 2026-05-07 | [Report](evaluations/qwen3-coder_30b/report.md) |
+| `deepseek-coder_v2:16b` | 0.0 / 100 | 0.0 | 2026-05-08 | [Report](evaluations/deepseek-coder_v2_16b/report.md) |

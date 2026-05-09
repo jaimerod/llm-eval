@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Automated LLM evaluation script using Ollama.
+"""
+Automated LLM evaluation script using Ollama.
 
 Usage:
     python main.py --model llama3.2
