@@ -226,3 +226,5 @@ Python packages (`requirements.txt`):
 | `nemotron-3-super:cloud` | 98.9 / 100 | 1.2 | 2026-05-06 | [Report](evaluations/nemotron-3-super_cloud/report.md) |
 | `qwen3-coder_30b` | 0.0 / 100 | 0.0 | 2026-05-07 | [Report](evaluations/qwen3-coder_30b/report.md) |
 | `deepseek-coder_v2:16b` | 0.0 / 100 | 0.0 | 2026-05-08 | [Report](evaluations/deepseek-coder_v2_16b/report.md) |
+| `source /repo/github.com/jaimerod/llm-eval/.venv/bin/activate` | 0.0 / 100 | 0.0 | 2026-05-08 | [Report](evaluations/source /repo/github.com/jaimerod/llm-eval/.venv/bin/activate/report.md) |
+| `gemma4:31b-cloud` | 95.7 / 100 | 26.7 | 2026-05-08 | [Report](evaluations/gemma4_31b-cloud/report.md) |
