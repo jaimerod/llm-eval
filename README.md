@@ -224,7 +224,5 @@ Python packages (`requirements.txt`):
 | `deepseek-coder-v2:16b` | 88.3 / 100 | 111.7 | 2026-05-08 | [Report](evaluations/deepseek-coder-v2_16b/report.md) |
 | `qwen3-coder:30b` | 92.1 / 100 | 14.2 | 2026-05-07 | [Report](evaluations/qwen3-coder_30b/report.md) |
 | `nemotron-3-super:cloud` | 98.9 / 100 | 1.2 | 2026-05-06 | [Report](evaluations/nemotron-3-super_cloud/report.md) |
-| `qwen3-coder_30b` | 0.0 / 100 | 0.0 | 2026-05-07 | [Report](evaluations/qwen3-coder_30b/report.md) |
-| `deepseek-coder_v2:16b` | 0.0 / 100 | 0.0 | 2026-05-08 | [Report](evaluations/deepseek-coder_v2_16b/report.md) |
-| `source /repo/github.com/jaimerod/llm-eval/.venv/bin/activate` | 0.0 / 100 | 0.0 | 2026-05-08 | [Report](evaluations/source /repo/github.com/jaimerod/llm-eval/.venv/bin/activate/report.md) |
 | `gemma4:31b-cloud` | 95.7 / 100 | 26.7 | 2026-05-08 | [Report](evaluations/gemma4_31b-cloud/report.md) |
+| `granite4.1:8b` | 93.1 / 100 | 87.9 | 2026-05-08 | [Report](evaluations/granite4.1_8b/report.md) |
